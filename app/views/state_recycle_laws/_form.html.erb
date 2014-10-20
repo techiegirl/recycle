@@ -1,0 +1,33 @@
+<%= form_for(@state_recycle_law) do |f| %>
+  <% if @state_recycle_law.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@state_recycle_law.errors.count, "error") %> prohibited this state_recycle_law from being saved:</h2>
+
+      <ul>
+      <% @state_recycle_law.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :item_id %><br>
+    <%= f.number_field :item_id %>
+  </div>
+  <div class="field">
+    <%= f.label :state_name %><br>
+    <%= f.text_field :state_name %>
+  </div>
+  <div class="field">
+    <%= f.label :state_abr %><br>
+    <%= f.text_field :state_abr %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

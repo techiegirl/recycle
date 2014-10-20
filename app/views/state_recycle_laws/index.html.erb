@@ -1,0 +1,31 @@
+<h1>Listing state_recycle_laws</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>State name</th>
+      <th>State abr</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @state_recycle_laws.each do |state_recycle_law| %>
+      <tr>
+        <td><%= state_recycle_law.item_id %></td>
+        <td><%= state_recycle_law.state_name %></td>
+        <td><%= state_recycle_law.state_abr %></td>
+        <td><%= state_recycle_law.description %></td>
+        <td><%= link_to 'Show', state_recycle_law %></td>
+        <td><%= link_to 'Edit', edit_state_recycle_law_path(state_recycle_law) %></td>
+        <td><%= link_to 'Destroy', state_recycle_law, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New State recycle law', new_state_recycle_law_path %>

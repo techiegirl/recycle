@@ -1,0 +1,2 @@
+module StateRecycleLawsHelper
+end

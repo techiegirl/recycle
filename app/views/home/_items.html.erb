@@ -1,0 +1,16 @@
+ <% if !@items.blank? %>
+    <table class="pretty">
+        <tr>
+            <th>Item Name</th>
+            <th>Item Description</th>
+        </tr>
+        <% @items.each do |item| %>
+         <tr>
+            <td><%= item.name %></td>
+            <td><%= item.description %></td>
+        </tr>
+        <% end %>
+    <% else %>
+     <p>No Items Found!!</p>
+    <% end %>
+  </table>

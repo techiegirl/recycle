@@ -1,0 +1,21 @@
+
+
+<%= form_tag('/search', remote: true) do %>
+    <p>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search", :name => nil %>
+    </p>
+<% end %>
+
+<div id="items" style="display:none;"></div>
+
+<%#= form_tag :controller => 'home', :method => 'item', :id => "items_search", :remote => true do %>
+  <!--<p>-->
+    <!--<%#= text_field_tag :search, params[:search] %>-->
+    <!--<%#= submit_tag "Search", :name => nil %>-->
+  <!--</p>-->
+
+    <!--<div id="items"><%#= render 'items' %></div>-->
+
+<%# end %>
+
